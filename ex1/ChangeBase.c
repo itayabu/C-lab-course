@@ -1,6 +1,5 @@
 /*
  * ChangeBase.c
- * program recieve
  *
  * Author: itay abulafia 303033286
  */
@@ -8,53 +7,63 @@
 #include <math.h>
 int baseFrom, baseTo;
 
+/**
+ * function take a number at any base and return its value at base 10.
+ */
 unsigned long int changeBaseToTen(unsigned long int oriNum)
 {
 	int i;
 	unsigned long int newNum = 0;
-	if (oriNum%10 >= baseFrom)
-	{
-		printf ("Invalid");
-		return(0);
-	}
 	i=0;
-	while (oriNum >0)
+	while (oriNum > 0)
 	{
-		printf(" A %d -> %d\n", oriNum, newNum);
-		newNum += (oriNum % 10) * pow(baseFrom,i);
+
+		//check for legal input (a number cannot be equal or bigger than its base)
+		if (oriNum%10 >= baseFrom)
+		{
+			printf ("Invalid");
+			return(0);
+		}
+
+		//build a new "base ten" number
+		newNum += (oriNum % 10) * pow(baseFrom, i);
 		oriNum /= 10;
 		i++;
 	}
-	printf(" A %d -> %d\n", oriNum, newNum);
 	return newNum;
 }
+
+/**
+ * function build a new base chosen number
+ */
 unsigned long int changeBaseFromTen(unsigned long int oriNum){
 	int i = 0;
-	unsigned long int numTow = oriNum;
 	unsigned long int newNum = 0;
-	while (oriNum >0)
+	while (oriNum > 0)
 	{
-
-		printf(" B %lu -> %lu\n", oriNum, newNum);
-		newNum += ((oriNum % baseTo) * pow(10,i));
+		newNum += ((oriNum % baseTo) * (long) pow(10,i));
 		oriNum /= baseTo;
 		i++;
 	}
-	for (;i >= 0;i--)
+	for (; i >= 0; i--)
 	{
 
 	}
-	printf(" %lu%lu\n", numTow, oriNum);
 	return newNum;
 }
 
+/**
+ * program receive a number, and change its base.
+ * program receive a number, its base and base to change to in the format of <num#base#basetochange>
+ * and return the number in its new base.
+ */
 int main()
 {
 	unsigned long int num;
 	unsigned long int newNum;
 	scanf("%lu#%d#%d", &num, &baseFrom, &baseTo);
-	num= changeBaseToTen(num);
-	newNum= changeBaseFromTen(num);
+	num = changeBaseToTen(num);
+	newNum = changeBaseFromTen(num);
 	printf("%lu\n", newNum);
 	return (0);
 }

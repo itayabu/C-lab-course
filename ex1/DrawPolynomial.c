@@ -16,13 +16,13 @@ double a, b, c, d;
 void drawZeroLine ()
 {
 	int i = 0;
-	for (i = X_START;i <= X_END;i ++ )
+	for (i = X_START; i <= X_END; i ++ )
 	{
-		if (0 > (a + i*(b + i*(c + i*d)) -0.5) && 0 < (a + i * (b + i * (c + i * d))+0.5))
+		if (0 > (a + i*(b + i*(c + i*d)) -0.5) && 0 < (a + i * (b + i * (c + i * d)) + 0.5))
 		{
 			printf("*");
 		}
-		else if (i==0)
+		else if (i == 0)
 		{
 			printf("+");
 		}
@@ -45,19 +45,21 @@ void drawLine (int y)
 	int i = 0;
 	if (y == 0)
 	{
-		for (i = X_START;i <= X_END;i ++)
+		for (i = X_START; i <= X_END; i ++)
 		{
-			if ( i== 0)
+			if ( i == 0)
 			{
 				printf("+");
 			}
 			else
+			{
 				printf("-");
+			}
 		}
 	}
-	for ( i= X_START;i <= X_END;i ++)
+	for ( i = X_START; i <= X_END; i ++)
 	{
-		if (y > (a + i * (b + i * (c + i * d)) -0.5) && y < (a + i * (b + i * (c + i * d))+0.5))
+		if (y > (a + i * (b + i * (c + i * d)) -0.5) && y < (a + i * (b + i * (c + i * d)) + 0.5))
 		{
 			printf("*");
 		}
@@ -88,7 +90,7 @@ int main()
 	scanf("%lf", &c);
 	printf("Select d:\n");
 	scanf("%lf", &d);
-	printf("y(x)=(%.3f)+(%.3f)*x+(%.3f)*x^2+(%.3f)*x^3\n",a,b,c,d);
+	printf("y(x)=(%.3f)+(%.3f)*x+(%.3f)*x^2+(%.3f)*x^3\n", a, b, c, d);
 	for (i = Y_START; i >= Y_END ; i--)
 	{
 		if (i == 0)

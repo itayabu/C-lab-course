@@ -15,11 +15,15 @@
 # define OPEN_WEIRD 123
 # define CLOSE_WEIRD 125
 
-
+/**
+ * program check a file for enclosures and check if they are legal.
+ * a legal enclosure is that every "close" enclosure comes after "open" enclosure and that are no "open"s at the
+ * end of the file.
+ */
 int main (int argc, char *argv[])
 {
 	FILE *pFile;
-	int INT_SIZE= sizeof(int), HALF_WAY = 2500;
+	int INT_SIZE = sizeof(int), HALF_WAY = 2500;
 	int openClosure[HALF_WAY];
 	int ARR_START = 40, CLOSURE_COUNT = 0, c;
 	pFile = fopen(argv[1], "r");
@@ -100,17 +104,20 @@ int main (int argc, char *argv[])
 			}
 		default:
 			break;
-
 		}
+
+		// take the next char to check
 		c = fgetc(pFile);
 	}
-	if (CLOSURE_COUNT !=0)
+
+	// after EOF, check if the count is good
+	if (CLOSURE_COUNT != 0)
 	{
 		printf ("Bad structure\n");
-		return 1;
+		return 0;
 	}
 	printf ("Ok\n");
-	return 0;
+	return 1;
 }
 
 

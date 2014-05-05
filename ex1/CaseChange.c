@@ -14,7 +14,7 @@
 int main ()
 {
 	char letterToConvert;
-	int letterAsNum, LOWER_NUM = 48, UPPER_NUM = 57, LOWER_SMALL = 65, UPPER_SMALL = 90,
+	const int letterAsNum, LOWER_NUM = 48, UPPER_NUM = 57, LOWER_SMALL = 65, UPPER_SMALL = 90,
 		LOWER_BIG = 97, UPPER_BIG = 122, CHAR_DIFF = 32, CHAR_TO_VALS;
 
 	scanf("%c", &letterToConvert);
