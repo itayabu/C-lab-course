@@ -24,7 +24,7 @@ CheckEnclosure:
 program check a file for enclosures and check if they are legal.
 
 DrawPlynomial:
-program recieve 3 parameters and draw a polynome for equivalence a+b^x+cx^2+dx^3
+program receive 3 parameters and draw a polynome for equivalence a+b^x+cx^2+dx^3
 
 ChangeBase:
 program receive a number, and change its base. 

@@ -1,0 +1,52 @@
+itayabu
+303033286
+itay abulafia
+
+=============================
+=  README for ex2
+=============================
+submitted files:
+README
+CheckDependency.c
+Decrypt.c
+MyStrLen.c
+MyStrCmp.c
+makefile 
+
+==================
+=  Description:  =
+==================
+CheckDependency:
+program program recieve a file containing list of files and their dependency files list
+program check and print if there are cycles of dependency between all the files in the list.
+
+Decrypt:
+program recive a number and a string and retunt its coded string.
+every char in the string is moving by the shift value in a circled way.
+
+MyStrCmp:
+program compare between tow strings
+program receive 2 strings as input, and compare them.
+if either string length is greater than 30 program return error note
+ 
+MyStrLen:
+program read a string from consule and and return its length
+if string is bigger than 25, program return error note. 
+
+
+======================
+=  Special Comments  =
+======================
+StrLen.c, StrLen.h:
+at start I built this header to use it in two or maybe even three files. after alot of work I
+noticed there is no need for it in any other file, yet I decided to include it just for
+the check of makefile and other stuff
+
+CheckDependency:
+I talked about this ex with people who told me they read from the file twice. I worked hard to make 
+it possible to read from the file only once. I added two ints to the "depFile" struct so I can better manage
+the steps in the reading and checking.
+also I heard about the parsing function for strings long after I build my own parsing system
+and I liked it so I kept it.
+the recursive DFS system let every file that had been checked already, not to be checked again and this sherts
+the recursive run time alot.
