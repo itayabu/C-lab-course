@@ -1,0 +1,40 @@
+itayabu
+
+itay abulafia
+
+=============================
+=  README for ex3
+=============================
+submitted files:
+README
+makefile
+GenericHashTable.c
+GenericHashTable.h
+MyIntFunctions.c
+MyStringFunctions.c 
+
+==================
+=  Description:  =
+==================
+GenericHashTable.h
+interface to a generic hash table include constructors for both the table and the objects in it,
+search, print and free(for both) functions, and structs for table and object.
+GenericHashTable.c
+implementation to a generic hash table include constructors for both the table and the objects in it,
+search, print and free(for both) functions.
+MyIntFunctions.c
+has three functions- hash function to place each int to its regard place in table,
+compare function to determine if the key int is equal to the int in the current cell
+print function- to print the value of key
+MyStrFunction
+has three functions- hash function to place each string in its regard place in table,
+compare function to determine if the key string is equal to the string in the current cell
+print function- to print the value of key
+makefile
+build HashIntSearch, HashStrSearch and a static library of GenericHashTable.
+
+
+
+======================
+=  Special Comments  =
+======================
