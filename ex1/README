@@ -1,22 +1,8 @@
-itayabu
-303033286
-itay abulafia
+README for ex1
+First ex. in c-lab, including 4 parts of differnrt programs 
 
-=============================
-=  README for ex1
-=============================
+Description:  
 
-submitted files:
- 
-ChangeBase
-CheckEnclosure <nameOfFile>
-DrawPolynomial
-ChangeBase
-README
-
-==================
-=  Description:  =
-==================
 ChangeCase:
 program converts capital letters to small letters, small letters to capital and square an integer.
 
@@ -27,15 +13,4 @@ DrawPlynomial:
 program receive 3 parameters and draw a polynome for equivalence a+b^x+cx^2+dx^3
 
 ChangeBase:
-program receive a number, and change its base. 
-
-
-======================
-=  Special Comments  =
-======================
-CheckEnclosure:
-since all of the ex. was one big function I thought it will be more readable without sub-functions.
-
-ChangeBase:
-I think because the meaning of "changeBaseToTen" and "changeBaseFromTen" are very different they should be in
-different functions though I could make them in one.
+program receive a number, and change its represent base. 
